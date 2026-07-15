@@ -1,0 +1,129 @@
+<div class="settings-page">
+
+    <div class="settings-sidebar">
+
+        <h2 class="settings-title">
+
+             Settings
+
+        </h2>
+
+        <button class="menu"
+            [class.active]="selectedTab==='account'"
+            (click)="changeTab('account')">
+
+            👤 Account
+
+        </button>
+
+        <button class="menu"
+            [class.active]="selectedTab==='appearance'"
+            (click)="changeTab('appearance')">
+
+            🎨 Appearance
+
+        </button>
+
+        <button class="menu"
+            [class.active]="selectedTab==='ai'"
+            (click)="changeTab('ai')">
+
+            🤖 AI Models
+
+        </button>
+
+        <button class="menu"
+            [class.active]="selectedTab==='chat'"
+            (click)="changeTab('chat')">
+
+            💬 Chat
+
+        </button>
+
+        <button class="menu"
+            [class.active]="selectedTab==='notifications'"
+            (click)="changeTab('notifications')">
+
+            🔔 Notifications
+
+        </button>
+
+        <button class="menu"
+            [class.active]="selectedTab==='privacy'"
+            (click)="changeTab('privacy')">
+
+            🔒 Privacy
+
+        </button>
+
+        <button class="menu"
+            [class.active]="selectedTab==='data'"
+            (click)="changeTab('data')">
+
+            📂 Data Controls
+
+        </button>
+
+        <button class="menu"
+            [class.active]="selectedTab==='about'"
+            (click)="changeTab('about')">
+
+            ℹ About
+
+        </button>
+
+    </div>
+
+    <div class="settings-content">
+
+        @if(selectedTab==='account'){
+
+            <app-account />
+
+        }
+
+        @if(selectedTab==='appearance'){
+
+            <app-appearance />
+
+        }
+
+        @if(selectedTab==='ai'){
+
+            <app-ai-model />
+
+        }
+
+        @if(selectedTab==='chat'){
+
+            <app-chat-settings />
+
+        }
+
+        @if(selectedTab==='notifications'){
+
+            <app-notifications />
+
+        }
+
+        @if(selectedTab==='privacy'){
+
+            <app-privacy />
+
+        }
+
+        @if(selectedTab==='data'){
+
+            <app-data-controls />
+
+        }
+
+        @if(selectedTab==='about'){
+
+            <app-about />
+
+        }
+
+    </div>
+
+</div>

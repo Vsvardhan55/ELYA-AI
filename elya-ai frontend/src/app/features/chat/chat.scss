@@ -1,0 +1,55 @@
+.chat-page{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--bg-primary);
+
+}
+
+.chat-header{
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 24px;
+
+    background:white;
+
+    border-bottom:1px solid var(--border-color);
+
+}
+
+.chat-body{
+
+    flex:1;
+
+    overflow:auto;
+
+    padding:30px;
+
+}
+
+.chat-footer{
+
+    padding:20px 40px;
+
+    background:transparent;
+
+}
+
+.status{
+
+    color:#0fa446;
+
+    font-weight:600;
+
+}

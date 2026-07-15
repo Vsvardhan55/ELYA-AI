@@ -1,0 +1,166 @@
+<div class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+
+        <div class="emoji-icon">🤖</div>
+
+</div>
+
+        <div>
+
+            <h2>ELYA AI</h2>
+
+            <small>AI Workspace</small>
+
+        </div>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-box">
+
+        <span class="emoji-icon">🔍</span>
+
+        <input
+            type="text"
+            placeholder="Search conversations">
+
+    </div>
+
+    <!-- New Chat -->
+
+    <button
+        class="new-chat"
+        (click)="newChat()">
+
+        <span class="emoji-icon">➕</span>
+
+        <span>New Chat</span>
+
+    </button>
+
+    <!-- Recent Chats -->
+
+    <div class="section-title">
+
+        Recent Chats
+
+    </div>
+
+    <div class="history">
+
+        @for(chat of conversations; track chat.id){
+
+    <div
+    class="history-item"
+    [class.active]="chat.id === activeId"
+    (click)="select(chat.id)">
+
+    <div class="chat-title">
+
+        <i class="fas fa-comments chat-icon" aria-hidden="true"></i>
+
+        <span class="title">
+            {{ chat.title }}
+        </span>
+
+        <i
+            *ngIf="chat.pinned"
+            class="fas fa-thumbtack pinned-icon"
+            title="Pinned"
+            aria-hidden="true">
+        </i>
+
+    </div>
+
+    <div class="actions">
+
+    <!-- Pin -->
+
+    <button
+        type="button"
+        class="icon-btn pin-btn"
+        aria-label="Pin conversation"
+        title="Pin Conversation"
+        (click)="togglePin(chat.id); $event.stopPropagation()">
+
+        <span class="emoji-icon">📌</span>
+
+    </button>
+
+    <!-- Rename -->
+
+    <button
+        type="button"
+        class="icon-btn rename-btn"
+        aria-label="Rename conversation"
+        title="Rename Conversation"
+        (click)="rename(chat); $event.stopPropagation()">
+
+        <span class="emoji-icon">✏️</span>
+
+    </button>
+
+    <!-- Delete -->
+
+    <button
+        type="button"
+        class="icon-btn delete-btn"
+        aria-label="Delete conversation"
+        title="Delete Conversation"
+        (click)="delete(chat.id); $event.stopPropagation()">
+
+        <span class="emoji-icon">🗑️</span>
+
+    </button>
+
+</div>
+
+</div>
+
+        }
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="sidebar-footer">
+
+        <div class="profile">
+
+            <div class="avatar">
+
+                V
+
+            </div>
+
+            <div>
+
+                <strong>Vardhan</strong>
+
+                <small>Developer</small>
+
+            </div>
+
+        </div>
+
+        <button
+            class="settings-btn"
+            type="button"
+            aria-label="Settings"
+            title="Settings"
+            (click)="openSettings()">
+
+          <span class="emoji-icon">⚙️</span>
+
+        </button>
+
+    </div>
+
+</div>

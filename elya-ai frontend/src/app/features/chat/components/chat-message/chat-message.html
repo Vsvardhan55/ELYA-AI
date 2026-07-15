@@ -1,0 +1,55 @@
+<div
+  class="message-wrapper"
+  [class.user-wrapper]="message.role === 'user'"
+  [class.assistant-wrapper]="message.role === 'assistant'">
+
+  <!-- Assistant -->
+
+  <div
+    class="avatar assistant-avatar"
+    *ngIf="message.role === 'assistant'">
+
+    🤖
+
+  </div>
+
+  <div class="content">
+
+    <div class="header">
+
+      <span class="name">
+
+        {{ message.role === 'assistant' ? 'ELYA AI' : 'You' }}
+
+      </span>
+
+      <span class="time">
+
+        {{ message.timestamp | date:'shortTime' }}
+
+      </span>
+
+    </div>
+
+    <div
+      class="bubble"
+      [class.user]="message.role==='user'"
+      [class.assistant]="message.role==='assistant'">
+
+      {{ message.content }}
+
+    </div>
+
+  </div>
+
+  <!-- User -->
+
+  <div
+    class="avatar user-avatar"
+    *ngIf="message.role === 'user'">
+
+    👤
+
+  </div>
+
+</div>

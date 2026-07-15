@@ -1,0 +1,38 @@
+<div class="chat-page">
+
+  <div class="chat-header">
+    <h2>ELYA AI Assistant</h2>
+    <span class="status">● Online</span>
+  </div>
+
+  <div class="chat-body">
+
+    @if(messages.length === 0){
+
+      <app-empty-state></app-empty-state>
+
+    } @else {
+
+      <app-message-list
+        [messages]="messages">
+      </app-message-list>
+
+      @if(isTyping){
+
+        <app-typing-indicator></app-typing-indicator>
+
+      }
+
+    }
+
+  </div>
+
+  <div class="chat-footer">
+
+    <app-chat-input
+      (send)="sendMessage($event)">
+    </app-chat-input>
+
+  </div>
+
+</div>

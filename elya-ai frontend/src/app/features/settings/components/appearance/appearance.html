@@ -1,0 +1,77 @@
+<h1>Appearance</h1>
+
+<div class="card">
+
+    <h3>Theme</h3>
+
+    <label>
+
+        <input
+            type="radio"
+            name="theme"
+            value="dark"
+            [(ngModel)]="settings.theme">
+
+        Dark
+
+    </label>
+
+    <label>
+
+        <input
+            type="radio"
+            name="theme"
+            value="light"
+            [(ngModel)]="settings.theme">
+
+        Light
+
+    </label>
+
+</div>
+
+<div class="card">
+
+    <h3>Accent Color</h3>
+
+    <label for="accentColor">
+
+    Accent Color
+
+</label>
+
+<input
+    id="accentColor"
+    type="color"
+    [(ngModel)]="settings.accentColor"
+    title="Accent Color">
+
+</div>
+
+<div class="card">
+
+    <h3>Font Size</h3>
+
+    <label for="fontSize">
+
+    Font Size
+
+</label>
+
+<input
+    id="fontSize"
+    type="range"
+    min="12"
+    max="20"
+    [(ngModel)]="settings.fontSize"
+    title="Font Size">
+
+</div>
+
+<button
+    class="save-btn"
+    (click)="save()">
+
+    Save Changes
+
+</button>

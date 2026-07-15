@@ -1,0 +1,25 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.messages{
+    width:100%;
+    max-width:950px;
+    margin:auto;
+    padding:20px 0 120px;
+}
+
+.user {
+  background: #6366f1;
+  color: white;
+  align-self: flex-end;
+}
+
+.bot {
+  background: #1e293b;
+  color: white;
+  align-self: flex-start;
+}

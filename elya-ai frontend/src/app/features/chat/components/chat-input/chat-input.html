@@ -1,0 +1,46 @@
+<div class="chat-input-container">
+
+  <button
+    class="icon-btn"
+    type="button"
+    aria-label="Attach File"
+    title="Attach File">
+
+    📎
+
+  </button>
+
+  <textarea
+
+      [(ngModel)]="message"
+
+      placeholder="Message ELYA AI..."
+
+      rows="1"
+
+      (keydown)="onKeyDown($event)">
+
+  </textarea>
+
+  <button
+    class="icon-btn"
+    type="button"
+    aria-label="Voice Input"
+    title="Voice Input">
+
+    🎤
+
+  </button>
+
+  <button
+    class="send-btn"
+    type="button"
+    aria-label="Send Message"
+    title="Send Message"
+    (click)="sendMessage()">
+
+      ➤
+
+  </button>
+
+</div>
