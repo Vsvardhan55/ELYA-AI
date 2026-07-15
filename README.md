@@ -246,7 +246,8 @@ Angular Chat UI
 
 # 📸 Screenshots
 
-> Add screenshots after completing the project.
+> <img width="1920" height="1031" alt="Screenshot 2026-07-15 210425" src="https://github.com/user-attachments/assets/5035b491-3a25-49f9-a018-2f6a9df6e975" />
+
 
 ### Landing Page
 
