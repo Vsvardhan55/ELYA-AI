@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+
+  mongodb:
+    image: mongo:7
+
+    container_name: elya-mongodb
+
+    restart: always
+
+    ports:
+      - "27017:27017"
+
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+
+    build: ./elya-ai-backend
+
+    container_name: elya-backend
+
+    ports:
+      - "5000:5000"
+
+    depends_on:
+      - mongodb
+
+    env_file:
+      - ./elya-ai-backend/.env
+
+  frontend:
+
+    build: ./elya-ai-frontend
+
+    container_name: elya-frontend
+
+    ports:
+      - "4200:4200"
+
+    depends_on:
+      - backend
+
+volumes:
+
+  mongo-data:
